@@ -672,162 +672,16 @@ With the exception of the pilots involving fiber (NQN, FFTx) which by its very n
 Each of the selected pilots receives the backing of a fellow.
 Commons for Europe also covers the trips of the fellow for training purposes and for developing the pilot.
 Finally, the project also covers the hardware needed for development and demonstration purposes.
-The estimated value of the package devoted to each pilot is 6,000 Euro.
+The estimated value of the package devoted to each pilot is 4,000 Euro.
 
-\section{The Open Sensor Network Pilot}
-\label{sec:osn}
-
-This pilot is focused on deploying a sensor network which would gather real time data from the environment, such as air quality, noise pollution, etc. This information would be then uploaded to an \emph{open data} portal to make it publicly available. The ultimate objective of this project is to let developers use this data to build applications that can improve the daily lives of the citizens.
-
-\emph{Open data} platforms have proven their usefulness many times, and some countries around the globe are already publishing data into their own portals. However, in order to prevent this ``localization'', more global solutions must be used. Good examples are \emph{Cosm} (former Pachube), \emph{UNDP Open Data}, Open Sensor Network platform from the OpenCities project, etc.
-
-Not only developers can create new kinds of applications for the citizenship but also help people realize the conditions in which they live. This knowledge leads ultimately to react in order to improve their environment.
-
-Since this project follows a \emph{BuB} approach each user shall have its own node (or several), which, at the same time would add resources to this network. In case not all nodes aren't connected to the Internet there must be a protocol to interconnect these nodes.
-
-As a power supply there shall be at least two options because each node should have some degree of independency. After all, there is not a predefined environment for these sensors to work on.
-
-For this purpose common wireless protocols such as Wi-Fi, Bluetooth and ZigBee have been compared since this decision will have direct impact on the project future. Although Wi-Fi and Bluetooth have good data rates they are not designed to have a low power consumption which is a key aspect. Also, ZigBee has a low complexity and the best range ---around 550m---, apart from admitting several topologies. Its data rate is the only drawback, but sensors don't transmit data that often hence Zigbee has been chosen to become the working protocol.
-
-Several sensor board options were available. The university already had Crossbow Telos B nodes which run the TinyOS operating system. This option has many advantages such as built-in multithreading and low-level option tuning. Also, it is open source. Another good choice is Arduino, an open source prototyping system which is commonly used nowadays and has a very large community. Since it is designed with simplicity in mind it lacks the complete set of features that TinyOS can provide, and consequently it is more lightweight, which sinergizes with the project purpose of deploying a low-power wireless sensor network.
-
-The approach that will be taken to combine these technologies requires a third element, a low-end server to manage all the information. The data will travel between nodes and finally will arrive to the sink (server) which would then upload data to the Internet. The sink can be any PC but in this case a \emph{Raspberry Pi} is the best choice. It is a cheap, low-power, Linux-based PC that has the size of a credit card.
-
-By the end of 2012 it is expected to have a working point-to-point communication as well as uploading gathered data to the Internet. In the first three months a full mesh network shall be working and also a simple web application so users who have a server can point where this is and save resources to their fellows. Finally, until the beginning of June all the necessary documentation for the project to be adapted and/or replicated shall be completed.
-
-
-
-\section{The Free Europe Wifi Pilot}
-\label{sec:few}
-
-The Free Europe WiFi project is based in the original idea that our Italian colleagues are working on. It is called Provincia WiFi, and tries to offer free WiFi internet connection to any Italian citizen. By now it is only available in some regions of that country, so the idea is to extend it to whole Europe. So, our work is to start establishing a similar project in Spain, always having full interoperability with the original project. Thereby, we want to take the next step to extend it to Europe.
-
-In summary, the final idea is: being a European citizen, it is possible to connect to any of the various access point of our network, in order to enjoy of a free internet connection, in every country that participates in the project.
-
-Notice the complexity, not only technical of the project, but also on every European country telecommunication laws. Every region has its own laws in reference of telecommunication organizations, and in the way citizen use the service. From keeping data from the connected users, to meet the rules of the market it's just an example.
-\\
-\\
-The Free Europe WiFi pilot is a very clear example of the BuB paradigm. Any final user can get free wireless connection to enjoy full Internet access, it is posible due to other people generosity. 
-It can be reached out because users share its own bandwith and Internet connection in favour to the rest of citizen.
-This kind of users, can use the system in order to provide this service as an added value to the clients of their own business. 
-In summary, this pilot is an excelent example of the bottom-up broadband paradigm, and the real evidence that a new way of developing telecommunications systems can be done.    
-\\
-\\
-This pilot is being carried out by Nacho Justel, mentored by Giovanni Calcerano from Provincia WiFi, and Albert Domingo from University Pompeu Fabra.
-\\
-\\
-About technical aspects, because of this wide range of different possibilities, it is difficult to create a totally generic prototype, so in order to design it there are many factors to consider.
-Talking about the technical aspects of the system, it base its functionality on OpenWISP. OpenWISP (Open Wireless Internet Service Provider) is a software platform that can be used to provide a full, complete WiFi service. It is actually divided into five different modules that will be explained below:
-
-\begin{enumerate}
-\item[\fbox{1}] \textbf{OpenWISP User Management System:} 
-It is a Ruby on Rails application, that interacts directly with the users. By using this module, the user can get access to the OpenWISP global system to get internet access, password recovery if needed and manage his account.
-This module is directly related with third party modules as the FreeRadius server with a MySQL database to sign-up/sign-out and save user information. Once the user is registered in the service, and every time he tries to connect to the network, he will be asked to introduce his username and password to start surfing Internet.
-This application has been designed to be integrated with RADIUS authentication solutions.
-
-\item[\fbox{2}] \textbf{OpenWISP Geographic Monitoring:}
-It is a Ruby on Rails - HTML 5.0 based, web GUI that allows the management staff to get information about the geographic information of the deployed access points. It renders a geographic map of the status your networks: access point up/down/unknown (if an access point has an "unknown" status, then it would not be able to download the configuration to connect to the system from the OpenWISP Access Point Manager.
-
-\item[\fbox{3}]\textbf{OpenWISP Captive Portal Manager:}
-It is a captive portal written from Scratch with Ruby on Rails. It allows the user surfing the Internet by enabling rules in the server firewall. This module is the operation center of all the system, so all the data that is generated or has as destination the system, will pass through this module. 
-
-\item[\fbox{4}]\textbf{OpenWISP Access Point Manager:}
-It is a Ruby on Rails based web GUI. This module allows the management staff to configure, monitorization and support of deployed access points.\\ It also stores value information about the network, as the amount of traffic each VPN generate, MAC addresses, geographical addresses and network setting, among other data. The access points download the configuration and settings from this module to establish a connection to the gateway.  
-
-\item[\fbox{5}]\textbf{OpenWISP Firmware:}
-It is a set of scripts (shell and web cgi) that sits on top of OpenWrt\footnote{OpenWrt is a linux distro for embedded devices that provides a fully writable file structure system with package management. This allows to customize devices keeping freedom from vendor configuration.}. OWF is a no visible module of the system. It is the firmware that every access point has installed to be able to connect to the network. Every time a new access point is connected to the network, it will download the settings from the Access Point Manager, as before explained. If an access point is rebooted without network connectivity, will get no configuration until it could establishes a connection with the OpenWISP Manager, so then, the configuration will be sent to it. 
-\end{enumerate}
-
-By the moment, we are designing the technical aspects of the spanish implementation of the project, so as soon as we get the design, we will start programming the code to make a first deployment.
-
-
-
-\section{The Northern Quarter Network Pilot}
-\label{sec:nqn}
-
-This project consists on the design, implementation and testing of an optical fiber network in the Northern Quarter (NQ) area of Manchester. This network will provide public free Wi-Fi in that area of the city. The project will be led by the Manchester Digital Development Agency (MDDA), and all the designs and implementations will follow a model they have already developed.
-
-
-The NQ is home to a wide range of SMEs from many sectors and is a good place for starting businesses to begin their activity and have a trading presence on a centric place of an important city. Providing public WiFi to the NQ will allow businesses to increase their revenues by increasing the number of customers and will give them a way to promote a big range of activities and/or events taking place in the zone. In addition, it is likely that this facts help to support the economy of the NQ area and of the whole city. As mentioned, the NQ area is like a small village in the centre of Manchester where most of the small businesses know each other, and work together to strengthen the economy of the city. This is an important relationship that can be intensified by the implantation of that network, and so the economy will be boosted.
-
-
-
-One of the most important aspects of the project, apart from designing and deploying the network, is defining a good pricing model for commercial use. It is a basic point, because it is crucial that the network becomes self-funding and sustainable after the conclusion of the C4EU project. It is, somehow, a critical aspect, and the success of the pilot will strongly depend on the success of the pricing definition. 
-
-\section{Fiber From The x Pilot}
-\label{sec:fft}
-
-The Fiber From The x --- FFTx pilot analyzes the possibility of extending the optical fiber under BuB model. At the beginning the pilot consisted in the design, implementation, testing and documentation of fiber optic in Rubi, but by some troubles, it has occurred delays in the implementation of fiber in Rubi. Therefore without leaving aside this matter we will realize a pilot called FFTx. The FFTx name is because the study includes the main fiber deployments (FFTH/FFTF/FFTP Fiber From The Home/Farm/Premises) against the previous FTTx model (Fiber To The x).
-\\
-
-There is a particular municipality where already deployed optical fiber under a different model that does not depend on telecommunications operators (ISP). Gurb-Osona is a municipality where have deployed several optical fiber lengths in different phases with a new model. The development and deployment was done by the users with the collaboration of guifi.net.  As an objective of the pilot, it will perform a detailed study of how the optical fiber was implemented in Gurb that will allow developing the main goal:
-"\textit{Create a commons or guidelines that will help to guide the deployment of optical fiber in different populations under BuB model.}"
-\\
-
-These commons \cite{oliver2010wca} can be consulted by any group of people interested in deploying fiber in any population. It may be helpful to them to know that materials or equipments can be used, the configuration and even a possible initial cost depending on the number of users. Therefore, we see that this pilot meets BuB principles because are the users who are involved in development and implementation of the optical fiber. The users are who pay the cost, they do the configuration and maintenance of the network and they do not have limitations of any operator. The idea itself and main goal of the FFTx pilot defines it as a BuB pilot.
-\\
-
-The solution to accomplish the main goal of the pilot is to study different aspects that are related to the deployment of optical fiber under this new model. This begins with a study of the optical fiber as a transmission medium up to the different way of making fiber network deployments. We will also know all the equipment and materials required for this. Afterwards, we will do a comprehensive study of how the deployment of fiber was done in Gurb. The commons will depend on criteria that may vary depending on the municipality ---the criteria may be demographic factors, economic factors, etc.---. The approximate time to complete  the objectives and main goal is 18 weeks starting in January and ending it in early May.
-\\
-
-The team which is part of pilot is:
-\begin{itemize}
-\item guifi.net foundation 
-\item Roger Baig is the mentor of this pilot
-\item UPF
-\item commons for europe
-
-\end{itemize}
-
-
-\section{The Mobile Node Pilot}
-\label{sec:mon}
-
-Within this pilot the main idea is to create a free transmission workstation that can be used in the urban space and contributes to the digital mesh through other networks. The project will consist on creating a mobile wireless workstation that builds or fits in an existent telecommunications infrastructure. It will have to be an auto-configurable device and will have the capability to interconnect with a wide range of different hardware. Furthermore, it will be able to work in many different spaces and without the need of an ISP.
-\\
-
-The pilot is about to finish its first phase between December 2012 and January 2013. Afterwards it will start the second phase together with BuB4EU. As this phase is not completely defined, it will be interesting to have the freedom to make proposals and do some tests that can provide the mobile node with any additional value that can be useful to make it more attractive for the final users. This second phase has no steps or subphases defined yet, but it has a main goal that is intended to be achieved:
-\\
-
-"\textit{Design a media-station with social implications, capable of: interconnect with wireless open networks, provide Internet access to zones with a complex accessibility due to its geography, enable multimedia processes (audio + video streaming, interactions with mobile devices) and act as an integrator of a range of open hardware systems like Arduino.}"
-\\
-
-We can find some BuB principles behind this pilot that justify its inclusion within the BuB4EU branch. The very first one is the citizen involvement with bottom-up systems. Moreover, the pilot is somehow "`open-minded"' since both the concept and the protocols are open. Finally, we find that it is cities-oriented as it tries to fix some issues, in terms of Internet access, that currently affect several cities and towns. 
-\\
-
-With regard to the technological solution, these are the main features:
-
-\begin{itemize}
-	\item Mesh Network: qmp.cat system and possibility to fit into infrastructural systems like guifi.net. 
-	\item Arduino: this is used for battery, signal and location meters.
-	\item LED display: this is used for the mobile node data display.
-	\item Power: lead batteries, in a near future it will be improved using lithium batteries.
-	\item Design: it is one of the points in which we will work more, we look for a physical design of the mobile station. \\
-\end{itemize}
-
-This pilot will take between 8 and 10 months beginning at January 2013, and will have the following initial set of shareholders:
-
-			\begin{itemize}
-				\item guifi.net
-				\item exo.cat
-				\item qmp.cat
-				\item ESADE
-				\item UPF
-				\item mobilitylab.net
-				\item commons for europe
-				\item Locality UK
-				\item Creativecoop UK
-			\end{itemize}  
-
+\section{Pilot Charter: Mesh Networks of People}
+\label{sec:mnp}
 
 
 
 \section{Conclusion}
 \label{sec:conclusion}
 
-The first BuB4EU pilots to be executed in the framework of the C4EU European project have already been selected.
-Each of the fellows assigned to the pilots have provided a description as well as project charter document.
-The fellows will carefully document their pilots and make this documentation publicly available as a common resource to be shared by the community.
 
 
 
