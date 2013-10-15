@@ -430,12 +430,12 @@ C4EU 5.1.3: Report on Selection of Opportunities and Projects -c
 %
 
 \author{
-	Fernando~Gros, %\IEEEmembership{Member,~IEEE,}
-	Alejandro~Andreu, %\IEEEmembership{Member,~IEEE,}
-	Ignacio~Justel, %\IEEEmembership{Member,~IEEE,}
-	Jorge~Beltran, %\IEEEmembership{Member,~IEEE,}
-	Jaume~Barcelo, %\IEEEmembership{Member,~IEEE,}
-    and~Miquel~Oliver% \IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
+	Name~Surname, %\IEEEmembership{Member,~IEEE,}
+	Name~Surname, %\IEEEmembership{Member,~IEEE,}
+	Name~Surname, %\IEEEmembership{Member,~IEEE,}
+	Name~Surname, %\IEEEmembership{Member,~IEEE,}
+	Name~Surname, %\IEEEmembership{Member,~IEEE,}
+    and~Name~Surname% \IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
 \thanks{
 The authors are with Universitat Pompeu Fabra
 }
@@ -556,15 +556,13 @@ This report covers the second call for pilots of the Bottom-up Broadband initiat
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} report presents the advancements in the pilots carried out in the BuB4EU branch of the C4EU European project.
+\IEEEPARstart{T}{his} report introduces the second round of pilots in the Bottom-up Broadband initiative.
 Section \ref{sec:about} explains that it is a collaborative document and how to contribute.
-The agreed selection criteria that were used to choose the pilots are described in \ref{sec:selection}.
-Sections \ref{sec:osn}, \ref{sec:few}, \ref{sec:nqn}, \ref{sec:fft} and \ref{sec:mon} introduce the pilots considered in the project.
-The concluding remarks are offered in Section \ref{sec:conclusion}.
+Section \ref{sec:cfp} reproduces the text of the second call for pilots and Section~\ref{sec:received} contains the received proposals.
+The combination of different proposals to obtain the pilots to be executed is described in Section~\ref{}.
+The team in charge of the execution of the proposals and the pilot charter document for each pilot is introduced in Section~\ref{}.
+Finally, Section~\ref{sec:conclusion} concludes the document.
 
-The appendices contain the project charters prepared by the fellows for each of the pilots.
-
-This second report on selection of opportunities and projects follows the earlier works \cite{barcelo2012bpp} and \cite{barcelo2012bub}, which contained detailed information about all the pilot proposals that had been presented in response to the first call for pilots.
 
 \section{About this document}
 \label{sec:about}
@@ -592,90 +590,272 @@ The system automatically keeps track of all the contributors and their contribut
 It is possible to see who is contributing more actively and which are the exact changes made by each contributor.
 And everything is public on the web.
 
-\section{Selection Criteria and Pilot Selection}
-\label{sec:selection}
+\section{The second call for pilots}
+\label{sec:cfp}
 
-Out of the twelve pilot proposals that were collected in the first call for pilots \cite{barcelo2012bub}, we selected five of them to be considered within the C4EU project.
-The pilots we are focusing on are the Open Sensor Network pilot (OSN), the Free Europe WiFi pilot (FEW), the Fiber From The X pilot (FFTx), the Northern Quarter Network pilot (NQN) and the Mobile Node pilot (MON).
+In February 2013 started the dissemination of the second open call for pilots.
+The call was first distributed among the \emph{Commons for Europe} partners, then at \emph{BattleMesh} (University of Aalborg) and the TCCC list (The Technical Committee in Computer Communication).
+We reproduce here the text of the call:
+\begin{quotation}
+Dear colleagues,
 
-First we introduce the criteria that was used for the selection and then we describe how the selected pilots meet those criteria.
+We are currently studying "Bottom-up Broadband". This is collaborative
+grassroots network deployment and maintenance. In this networks, the
+users (individuals, institutions, companies or other organizations)
+participate in the funding, planning, deployment and maintenance of
+the network. If you are participating in one of this initiatives or
+are interested in bottom-up-brodband, please contact us.
 
-\subsection{Selection Criteria}
+Open source software has changed the way that software is produced and
+maintained. Wikipedia has changed the way encyclopedian information is
+compiled and refined. P2P file exchange has changed the way files are
+shared and distributed. We believe that collaborative network
+deployment can change the way that networks are built, extended and
+maintained.
 
-The number of pilots proposals received in response to the call for pilots \cite{barcelo2012bpp} was large and it was not possible to execute them all with the available resources.
-The decision was to make a selection of the most representative and relevant, and focus the efforts on them.
+Probably, the most prominent example of collaborative network
+deployment is guifi.net. The size of this community network exceeds
+20,000 nodes. Last year's efforts have been focusing on community
+fiber deployment with around 70 homes and farms connected today.
 
-As described in the report ``Principles and early results (C4EU 5.6.1: Evaluation of Results and Best Practices -a )'', we are interested in pilots that serve the needs of the people.
-For this reason, we were interested in pilots with a committed community of backers.
+Besides fiber, we are also interested in ad-hoc mesh networks to cover
+events, wireless sensor networks to gather environmental data and
+public wifi offering models.
 
-As we consider three different technologies in the pilot (sensors, fiber and WiFi/SuperWiFi), it was important that the three of them were represented in the selected pilots.
+I attach the Bottom-up broadband call for pilots below.
 
-Finally, it was important that the pilot was easy to replicate in different cities across Europe.
+Best regards,
+Jaume
 
-\subsection{Alignment of the selected pilots and the selection criteria}
+******* BOTTOM-UP BROADBAND CALL FOR PILOTS *************
 
-A first selection criterion was the existence of a community that backed the pilot.
-For the Open Sensor Network pilot, it exists a closely related initiative called Smart Citizen (\url{www.smartcitizen.me}) that has rised around 18,000 Euro in crowdfunding, and therefore we believe there is interest from the part of the citizenship for these kind of technologies.
-
-The ProvinciaWiFi solution in Italy has a huge user base that gives credit to the model.
-For this reason we believe that the extension of the model to other cities and countries may enjoy the same success.
-
-The FFTx pilot provides bottom-up-broadband to only a dozen of families right now.
-However, as this bandwidth is distributed using the wireless community network, it benefits a considerably larger number of users.
-The fiber connections are so fast (1 Gbps) that the owners are happy to share it with others.
-
-Another criterion for selection has been the diversity of technologies.
-Tab. \ref{tab:technologies} taken from \cite{barcelo2012bub} summarizes the advantages and shortcoming of the different technologies.
-At this stage of the project, SuperWifi is not yet mature enough to serve the goals of the BuB initiatives, as it is still in a research stage.
-
-Regarding the distribution of the pilots with respect to technologies, there is one pilot for sensor nodes (OSN), two involving WiFi (NQN, FEW), two involving fibre (FFTx, NQN), and one involving a mobile mesh node (MON).
-There are already some of the pilots that mix different technologies and the vision is that in the future, as they evolve, the different pilots and technologies can be seamless combined as in Fig. \ref{fig:hybrid}.
-
-\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-%\extrarowheight as needed to properly center the text within the cells
-\caption{Technologies under consideration \cite{barcelo2012bub} }
-\label{tab:technologies}
-\centering
-\begin{tabular}{|c|p{5cm}|}
-\hline
-Technology & Characteristics \\
-\hline
-Fibre Optics & Mature technology, wired, very high throughput, relatively expensive, does not create nor suffer interference, reliable. \\
-WiFi & Mature technology, wireless, high throughput, more economic than fibre, limited by interference and spectrum saturation. \\
-Sensors & New technology, wireless, low throughput (for battery-powered devices), open data. \\
-Super-WiFi & Future emerging technology, wireless, medium throughput, longer propagation distance and better penetration compared to WiFi, co-existence with incumbent networks.\\
-\hline
-\end{tabular}
-\end{table}
+The high expectations created by the European Digital Agenda call for
+new models for network deployment. A combination of fiber and wireless
+technologies must be part of the solution to achieve the objectives in
+2020.
 
 
-\begin{figure}[!t]
-\centering
-%\includegraphics[width=\linewidth]{hybrid}
-\ifpdf
-\includegraphics[width=\columnwidth]{figures/hybrid.pdf}
-\else
-\includegraphics[width=\columnwidth]{figures/hybrid.eps}
-\fi
-\caption{A hybrid BuB deployment combining different technologies.}
-\label{fig:hybrid}
-\end{figure}
+The "Commons for Europe" competitiveness and innovation project
+explores "Bottom-up Broadband" (BuB) network deployment initiatives to
+analyze the best practices, find replicable success models and offer
+guidance to policy makers. In BuB networks, the users play a relevant
+role in planning, funding, deploying and maintaining the network. By
+users we mean the individuals and organizations, including commercial
+companies and public institutions, that benefit from the network.
+Network are shared as a "commons" resource by the communities for a
+greater benefit (and lower costs) for all the participants. The idea
+of BuB is closely linked to that of open access networks, which are
+proliferating in northern European countries.
 
-We have also chosen pilots that can cover multiple cities in Europe.
-With the exception of the pilots involving fiber (NQN, FFTx) which by its very nature are localized, the others can be tested and demonstrated in any of the participating cities.
 
-\subsection{Resources devoted to selected pilots}
+*** BuB Call for pilots 2013 ***
 
-Each of the selected pilots receives the backing of a fellow.
-Commons for Europe also covers the trips of the fellow for training purposes and for developing the pilot.
-Finally, the project also covers the hardware needed for development and demonstration purposes.
-The estimated value of the package devoted to each pilot is 4,000 Euro.
+
+We are looking for BuB intiatives to be considered in the "Commons for
+Europe" project. These initiatives will be profusely documented and
+used as examples for future BuB network deployments. Each selected
+pilot will receive the backing of a BuB fellow for nine months.
+
+Proposal submission deadline: May 15th 2013
+Selection decision: June 15th 2013
+Start of the pilot phase: July 2013
+
+Visit our web
+
+http://bub4eu.net/
+
+and join our mailing list
+
+https://llistes.guifi.net/sympa/arc/bub
+
+for more information.
+
+
+A brief description of the first round of executed pilots follows.
+(The application form is at the end of the email)
+restrictions of the existing infrastructure, allowing mobility and
+autonomy is an important field that can benefit all the parts involved
+as long as we find the right balance.
+
+
+
+Application form:
+
+=========================================================
+
+This pilot project data sheet will help us to keep track of all pilot
+initiatives.
+
+Please complete the following fields and submit to jaume.barcelo@upf.edu
+
+(or even better, send it to the bub mailing list if you are registered)
+
+• Title:
+
+• Brief description:
+
+• Goals:
+
+• Estimated start date:
+
+• Estimated end date:
+
+• Priority: (Low/Normal/High)
+
+• Stage: (Prospect/Pre-project/Review/Execution/Evaluation/Finished)
+
+• Type: (Wifi/SuperWifi/Fibre Optics/Hybrid)
+
+• Status: (Not Started/In Progress/On Hold/Completed)
+
+• Progress \%:
+
+• Country:
+
+• Area:
+
+• City:
+
+• Neighbourhood:
+
+• Project type:
+
+• Contacts:
+
+• Risk \%:
+
+(0\% means that the success is guaranteed, 100\% means that it is
+impossible to successfully complete this pilot)
+
+• Regulatory issues:
+
+• Potential impact (e.g., number of users, BuB funds raised, cities
+involved, etc.):
+
+• Comments:
+
+
+Thanks for your collaboration :)
+
+End of application form.
+
+=====================================================
+\end{quotation}
+
+\section{Received proposals}
+\label{sec:received}
+
+\subsection{A Pilot Wireless Network for Remote Sensor Data Collection from Griffin Forest in Central Scotland}
+
+Title: A Pilot Wireless Network for Remote Sensor Data Collection from Griffin Forest in Central
+Scotland
+
+Brief description and Goals:
+
+Geoscientists from Edinburgh University have been conducting field experiments since 1996
+in the Griffin forest in central Scotland, 4Km southeast of Aberfeldy. The focus of the current
+experiment, which is expected to continue for at least 5 years, is on understanding the impact
+of aerosol‐based nitrogen fertilization to stimulate forest growth in comparison with the
+traditional fertilization method based on solid pellets in significantly higher amounts and
+infrequently (typically every 5 years). Understanding the effect of background levels of
+nitrogen on forest growth requires monitoring various environmental, micro­climatological
+and hydrological factors that together reflect forest growth rate. Consequently, the
+experimental site in the Griffin forest has a wide range of sensors deployed over a 1Km2 area.
+Currently there is no communications network infrastructure in place at the experimental site for
+remote access from Edinburgh as well as for on‐site communication among various
+geographically distributed sensors. As a result, geoscientists from Edinburgh connected with
+the experiment have to make weekly trips to the site for data collection and maintenance of
+site infrastructure (e.g., replacement of batteries on sensors).
+The goal of this project is to enable network connectivity to Edinburgh for remote sensor data
+collection and site monitoring. This will be achieved by deploying a wireless base station at the
+site and a wireless relay that bridges connectivity between the base station and nearest Internet
+connection point. Given the remoteness of the site, both these wireless masts have to be
+self­powered via renewable energy sources (solar and wind). Long­distance WiFi could be used
+to interconnect these wireless masts. Since the vegetation and forest cover dampens wireless
+signal propagation, we also intend to experiment with SuperWiFi to understand the benefits it
+provides towards achieving required coverage with low power ­­ power conservation is important
+when using self­powered wireless relays for reliable connectivity at low cost. The Forestry
+Commission Scotland, who have a base near the Griffin site,  have in principle agreed to allow
+us to share their Internet connection.
+
+Estimated start date: 1 August 2013
+
+Estimated end date: 30 April 2014
+
+Priority: (Low/Normal/High) High
+
+Stage: (Prospect/Pre­project/Review/Execution/Evaluation/Finished) Pre­project
+
+Type: (Wifi/SuperWifi/Fibre Optics/Hybrid) Wifi and SuperWifi• Status: (Not Started/In Progress/On Hold/Completed) Not Started
+
+Progress %:
+
+Country: UK
+
+Area: Rural
+
+City: Near Aberfeldy, Scotland
+
+Neighbourhood: Griffin Forest
+
+Project type:
+
+Contacts: Dr Mahesh Marina (mmarina@inf.ed.ac.uk)
+
+Risk \%: 0\%. Through the Tegola project \footnote{Tegola Tiered Mesh Network Testbed in Rural Scotland} , we have substantial experience on successfully
+using long­distance WiFi for wireless Internet access in rural and remote areas.
+(0\% means that the success is guaranteed, 100\% means that it is
+impossible to successfully complete this pilot)
+
+Regulatory issues: For experimenting with SuperWiFi, we will get an experimental license from
+Ofcom, the UK telecommunications regulating authority.
+
+Potential impact (e.g., number of users, BuB funds raised, cities
+involved, etc.):
+Having the experiment site connected to the Internet leads to several benefits. Firstly, it will result
+in cost savings through reduced travel requirements for sensor data retrieval from the site.
+Secondly, it will enable remote monitoring of the experimental system for faults in near real­time
+that will in turn lead to data quality improvement and more informed site visits. Thirdly,
+networking among sensors within the site will enable development of adaptive sampling systems
+which would allow for event driven sampling based on measurements from non‐co‐located
+measurement systems. Finally, external communication capability would allow for more rapid
+dissemination of results from the experiment to interested communities (e.g., European scale
+carbon exchange modelling efforts).
+
+Comments:
+We would benefit from ready to use equipment for this pilot approximately valued around £5000,
+thanks to the Tegola project which initially was deployed as an experimental wireless testbed but
+now has evolved into a self­sustaining rural wireless network owned and run by the local
+communities in Northwest Scotland. As already mentioned, this pilot would also benefit from an
+Internet connection generously provided by the Forestry Commission Scotland. We would
+however need a person to help with the pilot deployment at Griffin site who we hope would be
+supported through the BuB initiative.
+
+\section{Pilot Proposal Combination}
+\label{sec:Combination}
+
+After receiving all the proposals we started to analyze common trends and possible synergies among them.
+The fellows were selected and offered to choose the pilot of their interest.
+In what follows, we reproduce the pilot charter of all the pilots that will be executed in the second round of pilots.
 
 \section{Pilot Charter: Mesh Networks of People}
 \label{sec:mnp}
+
+Fellow: Sergio Almendros
+
+Mentor: Daniel Mur
+
+Advisor: Jaume Barcelo
+
+\subsection{Pilot purpose or justification}
+The purpose of this pilot is to create an android mobile application that allows users to create a mesh network.
+The nodes of the network will be the mobile devices running the application, and they will share information among the participating users.
+
+\subsection{Measurable pilot objectives and related success criteria}
+\begin{itemize}
+\item The android application has to be able to have a list of the people around the smartphone that are using the the application, at least 10 users.
+\item If there is a user that is sharing information, other users must be able to see it in less than 1 minute.
+\end{itemize}
 
 
 
