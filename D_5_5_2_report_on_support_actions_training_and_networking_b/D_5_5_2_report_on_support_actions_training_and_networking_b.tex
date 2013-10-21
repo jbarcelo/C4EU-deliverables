@@ -142,10 +142,10 @@
   % driver is specified.
    \usepackage[dvips]{graphicx}
   % declare the path(s) where your graphic files are
-  % \graphicspath{{../eps/}}
+  \graphicspath{{./figures/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.eps}
+   \DeclareGraphicsExtensions{.eps}
 \fi
 % graphicx was written by David Carlisle and Sebastian Rahtz. It is
 % required if you want graphics, photos, etc. graphicx.sty is already
@@ -379,13 +379,15 @@
 % Read the url.sty source comments for usage information. Basically,
 % \url{my_url_here}.
 
+\usepackage{pgfgantt}
+
 
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \renewcommand{\headheight}{0.4in}
 \setlength{\headwidth}{\textwidth}
 \fancyhead[L]{
-  \includegraphics[height=0.15in]{figures/COM4EU_Logo.eps}
+  \includegraphics[height=0.15in]{COM4EU_Logo}
 }
 \fancyhead[R]{ % right
 C4EU 5.5.2: Report on support actions - Training and Networking -b
@@ -410,7 +412,7 @@ C4EU 5.5.2: Report on support actions - Training and Networking -b
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Building a BuB Community \\ (C4EU 5.5.1: Report on support actions - training and networking -a )}
+\title{Building a BuB Community \\ (C4EU 5.5.2: Report on support actions - training and networking -b )}
 %
 %
 % author names and IEEE memberships
@@ -423,12 +425,12 @@ C4EU 5.5.2: Report on support actions - Training and Networking -b
 %
 
 \author{
-	Jorge~Beltran, %\IEEEmembership{Member,~IEEE,}
-	Alejandro~Andreu, %\IEEEmembership{Member,~IEEE,}
-	Ignacio~Justel, %\IEEEmembership{Member,~IEEE,}
-	Fernando~Gros, %\IEEEmembership{Member,~IEEE,}
-	Jaume~Barcelo, %\IEEEmembership{Member,~IEEE,}
-    and~Miquel~Oliver% \IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
+	Name~Surname, %\IEEEmembership{Member,~IEEE,}
+	Name~Surname, %\IEEEmembership{Member,~IEEE,}
+	Name~Surname, %\IEEEmembership{Member,~IEEE,}
+	Name~Surname, %\IEEEmembership{Member,~IEEE,}
+	Name~Surname, %\IEEEmembership{Member,~IEEE,}
+    and~Name~Surname% \IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
 \thanks{
 The authors are with Universitat Pompeu Fabra
 }
@@ -490,10 +492,12 @@ The authors are with Universitat Pompeu Fabra
 \begin{abstract}
 %\boldmath
 This report summarizes the training, networking and communication efforts of the BuB4EU branch of the Commons for Europe project.
-Four fellows have joined the project so far and they are provided training and guidance to complete the BuB pilots they are working on.
+At the time of this writing, the fellows recruited for the second round of botto-up broadband pilots are already working.
 Each of the fellows has both one academic advisor and one mentor with extensive BuB experience.
 These two roles complement each other in the education of the student.
-The collaboration tools are those commonly present in collaborative initiatives: workshops, mailing list, git repository and talks at international forums.
+The collaboration tools are those commonly present in collaborative initiatives: workshops, mailing list, and a git repository.
+We complement the training of the fellows with the training of the general public using an online course.
+The goal of this course is to empower the citizens to be able to reproduce one of the pilots that was executed in the first round: the open wireless sensor network.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -556,8 +560,9 @@ After this introduction, Section \ref{sec:about} provides information about this
 Section \ref{sec:fellows} introduces the fellow program that we have prepared to back the execution of the selected pilots.
 Section \ref{sec:mentor} describes the roles of mentor and adacemic advisor that will help the fellows participating in the pilots.
 Those that are interested in BuB4EU meet in the workshops detailed in Section \ref{sec:workshops} and participate in the mailing list as explained in Section \ref{sec:mailing}.
-Additionally, we are preparing a web as mentioned in Section \ref{sec:web}.
-The BuB4EU branch and the obtained results have also been presented in external international forums that are introduced in Section \ref{sec:forums}.
+A web has been constructed and is continually evolving as explained in \ref{sec:web}.
+The BuB4EU branch and the obtained results have also been presented bottom-up broadband forums that are introduced in Section \ref{sec:forums}.
+The plan for the preparation of an online course is detailed in~\ref{sec:online}.
 Finally, Section \ref{sec:conclusion} offers some concluding remarks.
 
 \section{About this document}
@@ -903,15 +908,10 @@ The technical program comprised talks and demonstrations of the latest advanceme
 
 Luis Sanabria presented the demo ``Spectrum Sensing with USRP-E110'' to detect the availability of white spaces in the band used for SuperWifi communications \cite{sanabria2012ssu}.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width = 11cm]{figures/luis.eps}
-  \caption{Demo ``Spectrum Sensing with USRP-E110'' (UPF) and demo ``Network Coding as a WiMAX Link Reliability Mechanism: an Experimental Demonstration'' (MIT). Hamilton Institute, NUIM. Photo by Cristina Cano.}
-  \label{fig:tvChannels}
-\end{figure}
-~          
 
 \section{Online Training}
+\label{sec:online}
+
 \subsection{Introduction and goals} % The asterisk leaves out this chapter from the table of contents
 
 It is a commonplace that the Internet is changing our lives.
@@ -1148,7 +1148,7 @@ group peaks={}{}{.2}]{19}
 \begin{center}
 \includegraphics[width=1.00\linewidth]{screenshot}
 \caption{A screenshot of a draft of the course at P2P University}
-\label{fig:SCK}
+\label{fig:screenshot}
 \end{center}
 \end{figure}
 
@@ -1285,7 +1285,7 @@ Albert Domingo, Manuel Palacin, (Alejandro Andreu)
 \item Michel Bauwens (P2P Foundation)
 \item Tiberius Brastaviceanu (Sensorica): He is founder, active member, coordinator, facilitator, engineer and product designer at Sensorica.
 \begin{center}
-\includegraphics[width=0.200\linewidth]{Tiberius}
+\includegraphics[width=0.200\linewidth]{tiberius}
 \end{center}
 \item Guillem Camprodon (FabLab Barcelona): He is a researcher at the Institut d'Arquitectura Avancada de Catalunya (IAAC). He participates in the Smart Citizen Kit project as the main responsible for integration and project development (hardware and software).
 \begin{center}
@@ -1300,7 +1300,7 @@ He is currently a Ph.D. candidate at the Networking Technologies and Strategies 
 
 He is a teaching assistant in a course about networking protocols. His research interests include Super-Wifi communications, Open Data, Big Data, public administration data and regulation. He participates in the 'Commons for Europe' and 'Open Cities' European projects. 
 \begin{center}
-\includegraphics[width=0.200\linewidth]{Albert}
+\includegraphics[width=0.200\linewidth]{albert}
 \end{center}
 \item Robert Faludi (Digi International)
 \item Vanessa Gennarelli (P2P University): She is Learning Lead at P2PU.
