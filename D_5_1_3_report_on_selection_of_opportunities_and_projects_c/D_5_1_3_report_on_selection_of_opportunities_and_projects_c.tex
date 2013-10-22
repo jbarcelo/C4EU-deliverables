@@ -1908,8 +1908,61 @@ The nodes of the network will be the mobile devices running the application, and
 \begin{itemize}
 \item The android application has to be able to have a list of the people around the smartphone that are using the application, at least 10 users.
 \item If there is a user that is sharing information, other users must be able to see it in less than 1 minute.
+\item It has to be notifications for new news in less than 1 minute after the new is released.
+\item Any user could put information to the other users to see it, but now I have not decided what kind of information will be shared or how big, so I don’t know if the user will have a limited amount of information to share.
 \end{itemize}
 
+\subsubsection{High-level requirements}
+\begin{itemize}
+\item Using an efficient data structure regarding issues of energy expenditure.
+\item It has to have proactive methods to tell other users that you have information and reactive methods to only give information if someone asks for it.
+\item It has to be an android application.
+\end{itemize}
+
+\subsubsection{High-level pilot description}
+The goal is to develop an open mesh multi-hop platform that is sufficiently easy to use that people who do not have knowledge about telecommunications could create a mesh network without problems.
+The platform will allow that any Wi-Fi equipped (802.11b/g/a) smartphone with android operating system could create his own network with other users, without any infrastructure for the purpose of sharing information with other people in the same mesh network.
+This project is divided in two parts, the first one is the creation of the mesh network using the Wi-Fi interface on smartphones, which will be done by i2cat, and the second one, is to develop an application that will run on the mesh network as a Publish/Subscribe system, letting it do a match between people that have information and people that want information. This will be an Android Application.
+
+\subsubsection{High-level risks}
+Develop a mobile application that works on a mesh network but it consumes the battery too quickly.
+
+\subsubsection{Summary milestone schedule}
+\begin{itemsize}
+\item From 20/09/2013 to 23/09/2013
+	\begin{itemsize}
+	\item Establish the general idea of the TFG and specifics goals.
+	\end{itemsize}
+\item From 23/09/2013 to 11/10/2013
+	\begin{itemsize}
+	\item Specify the tasks to do and make a planification.
+	\end{itemsize}
+\item From 11/10/2013 to 30/10/2013
+	\begin{itemsize}
+	\item Study the Publish/Subscribe architectures for MANET (Mobile Ad hoc Networks)
+	\end{itemsize}
+\item From 31/10/2013 to 10/01/2014
+	\begin{itemsize}
+	\item The definition of a data structure that will be efficient.
+	\end{itemsize}
+\item From 10/01/2014 to 01/06/2014
+	\begin{itemsize}
+	\item Analysis, design and development of the android mobile application.
+	\item Make the appropriate documentation.
+	\item Evaluation of the project, create some tests and improve if is necessary.
+	\end{itemsize}
+\item From 02/06/2014 to 30/06/20014
+	\begin{itemsize}
+	\item Preparation of the final memory.
+	\end{itemsize}
+\item From 01/07/2014 to the date of the presentation
+	\begin{itemsize}
+	\item Make the presentation.
+	\end{itemsize}
+\end{itemsize}
+
+\subsubsection{Summary budget}
+The cost of this project will be approximately 4000 €. This quantity came from the scholarship to the student that will develop this pilot, a minimum of two devices with android operating system and the time that the tutor spends with the student.
 
 
 \section{Conclusion}
