@@ -1891,41 +1891,41 @@ In the following section, we reproduce the pilot charter of all the pilots that 
 \section{Team and Pilot Charters}
 \label{sec:charters}
 
-\subsection{Pilot Charter: Mesh Networks of People}
+\subsection{Pilot Charter: A bottom-up sensor testbed}
 \label{sec:mnp}
 
 Fellow: Sergio Almendros Diaz
 
-Mentor: Daniel Mur
+Mentor: 
 
 Advisor: Jaume Barcelo
 
 \subsubsection{Pilot purpose or justification}
-The purpose of this pilot is to create an android mobile application that allows users to create a mesh network.
-The nodes of the network will be the mobile devices running the application, and they will share information among the participating users.
+The purpose of this pilot is to build a sensor platform that can be attached to guifi nodes to gather and share sensory data.
 
 \subsubsection{Measurable pilot objectives and related success criteria}
 \begin{itemize}
-\item The android application has to be able to have a list of the people around the smartphone that are using the application, at least 10 users.
-\item If there is a user that is sharing information, other users must be able to see it in less than 1 minute.
-\item It has to be notifications for new news in less than 1 minute after the new is released.
-\item Any user could put information to the other users to see it, but now I have not decided what kind of information will be shared or how big, so I don’t know if the user will have a limited amount of information to share.
+\item Gather data about temperature, humidity, light and noise. 
+\item Share the data as open data.
+\item Deploy at least two nodes and gather data for at least two weeks.
 \end{itemize}
 
 \subsubsection{High-level requirements}
 \begin{itemize}
-\item Using an efficient data structure regarding issues of energy expenditure.
-\item It has to have proactive methods to tell other users that you have information and reactive methods to only give information if someone asks for it.
-\item It has to be an android application.
+\item Outdoor enclosure.
+\item Use open hardware and open software to the possible extent.
+\item Use standardized interfaces to integrate with other projects.
 \end{itemize}
 
 \subsubsection{High-level pilot description}
-The goal is to develop an open mesh multi-hop platform that is sufficiently easy to use that people who do not have knowledge about telecommunications could create a mesh network without problems.
-The platform will allow that any Wi-Fi equipped (802.11b/g/a) smartphone with android operating system could create his own network with other users, without any infrastructure for the purpose of sharing information with other people in the same mesh network.
-This project is divided in two parts, the first one is the creation of the mesh network using the Wi-Fi interface on smartphones, which will be done by i2cat, and the second one, is to develop an application that will run on the mesh network as a Publish/Subscribe system, letting it do a match between people that have information and people that want information. This will be an Android Application.
+The goal is to use an arduino platform to create a bottom-up broadband wireless sensor networks. 
+As guifi.net has already over 20,000 nodes, the idea is to co-locate the sensory platforms together with the guifi.net nodes and use the guifi.net network to transmit the data.
+This data should be gathered and shared.
+Ideally, the pilot should include a presentation interface for the users to visualize the data.
 
 \subsubsection{High-level risks}
-Develop a mobile application that works on a mesh network but it consumes the battery too quickly.
+A possible risk is that the prototypes are not rugged enough for outdoor environments.
+It is also a risk that the prototype is not stable and needs to be reset very often.
 
 \subsubsection{Summary milestone schedule}
 \begin{itemize}
@@ -1935,21 +1935,22 @@ Develop a mobile application that works on a mesh network but it consumes the ba
 	\end{itemize}
 \item From 23/09/2013 to 11/10/2013
 	\begin{itemize}
-	\item Specify the tasks to do and make a planification.
+	\item Specify the tasks to do and make a planning.
 	\end{itemize}
 \item From 11/10/2013 to 30/10/2013
 	\begin{itemize}
-	\item Study the Publish/Subscribe architectures for MANET (Mobile Ad hoc Networks)
+	\item Connect first sensors to the Arduino.
 	\end{itemize}
 \item From 31/10/2013 to 10/01/2014
 	\begin{itemize}
-	\item The definition of a data structure that will be efficient.
+	\item Connect to guifi network and upload data to an open data platform.
 	\end{itemize}
 \item From 10/01/2014 to 01/06/2014
 	\begin{itemize}
-	\item Analysis, design and development of the android mobile application.
-	\item Make the appropriate documentation.
-	\item Evaluation of the project, create some tests and improve if is necessary.
+	\item Integration of sensors and communication aspects.
+	\item Install prototypes.
+	\item Data sharing and visualization.
+    \item Data analysis and evaluation of the testbed.
 	\end{itemize}
 \item From 02/06/2014 to 30/06/20014
 	\begin{itemize}
@@ -1962,7 +1963,7 @@ Develop a mobile application that works on a mesh network but it consumes the ba
 \end{itemize}
 
 \subsubsection{Summary budget}
-The cost of this project will be approximately 4000 €. This quantity came from the scholarship to the student that will develop this pilot, a minimum of two devices with android operating system and the time that the tutor spends with the student.
+The cost of this project will be approximately 4000 €. This quantity is for the scholarship to the student that will develop this pilot, budget for attending a conference or visiting collaborators, and the purchase of the necessary hardware.
 
 \subsection{Pilot Charter: Visual Interface/Mashup for WiFi and Sensor Networks}
 \label{sec:mnp}
