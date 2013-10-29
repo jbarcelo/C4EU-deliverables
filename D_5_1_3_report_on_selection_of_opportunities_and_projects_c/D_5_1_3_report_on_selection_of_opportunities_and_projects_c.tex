@@ -1963,7 +1963,7 @@ It is also a risk that the prototype is not stable and needs to be reset very of
 \end{itemize}
 
 \subsubsection{Summary budget}
-The cost of this project will be approximately 4000 €. This quantity is for the scholarship to the student that will develop this pilot, budget for attending a conference or visiting collaborators, and the purchase of the necessary hardware.
+The cost of this pilot will be approximately 4000 €. This quantity is for the scholarship to the student that will develop this pilot, budget for attending a conference or visiting collaborators, and the purchase of the necessary hardware.
 
 \subsection{Pilot Charter: Visual Interface/Mashup for WiFi and Sensor Networks}
 \label{sec:mnp}
@@ -2034,6 +2034,133 @@ The principle purpose of my pilot is to develop an application with a visual int
 conventions).
 
 \end{itemize}
+
+\subsection{Pilot Charter : A Pilot Wireless Network for Remote Sensor Data Collection
+from Griffin Forest in Central Scotland.}
+
+Fellow: Ryan Chetcuti
+Mentor: Dr. Mahesh Marina, Dr. Robert Clement
+
+\subsubsection{Pilot Purpose or Justification}
+The aim of this pilot is to provide remote connectivity to a network of sensors within the Griffin
+forest, such that the data can be monitored in near real-time. The final aim is to reduce as much as
+possible the number of visits that personnel would have to do, as well as enabling more complex
+sampling to take place.
+
+\subsubsection{Measurable pilot objects and related success criteria}
+\begin{itemize}
+\item Implement a network connecting the site to the nearest possible internet connection
+\item Connect the currently installed sensors to a local network on site
+\item Enable remote access to the local network for the Geosciences researchers
+\end{itemize}
+
+\subsubsection{High-Level Requirements}
+\begin{itemize}
+\item Wireless technology will have to be used to get connectivity given the location. A relay
+point will have to be used to connect the site to the nearest internet connection point.
+\item A network will need to be installed on site, consisting of both wired and wireless
+connectivity depending on location and type of sensor.
+\item Tunnelling will have to be used to set up a secure connection from the site to the researchers'
+office network.
+\end{itemize}
+
+\subsubsection{High-Level Pilot Description}
+The Griffin forest is a plantation forest where research has been underway sine 1996. The research
+is investigating the performance of aerosol based nitrogen fertilisation as compared to traditional
+fertilisation methods using solid pellets in significant amounts infrequently. To carry out this
+research the geoscience team is using a number of sensors measuring different values over an area
+of 1 km2. At present, the team has to visit the site weekly to gather the data from the sensors, and
+ensure that the readings are going well.
+
+During the initial phase of this project, a connection from the site to the nearest point of connection
+to the internet will be set up. Using this link, along with the use of tunnelling protocols to connect
+from the team's office at the University of Edinburgh to the site. There are no sites within line-of-
+sight from the experimental site where an internet connection may be set up. Thus relays will have
+to be used to set up the link. A base station will be set up on top of a tower within the forest,
+reaching above the forest canopy, a relay station will be set up on a hill opposite the site, while the
+final base station will be located at the Internet connection point, which is in direct view from the
+relay point. The challenges anticipated for this part of the project are the location of adequate relay
+sites and associated permissions for use of the site, as well as the use of renewable energy sources
+to power the devices.
+
+During the second part of the project, the temporary link will be replaced by a longer-term and
+longer length link to the JANET network. JANET is the network infrastructure between the
+educational and research institutions within the UK. This link will probably need to be much longer
+than the initial one, require higher transmission powers and possibly the need of a license for such
+transmissions.
+
+In the final stage of this project, the sensors on site will be connected to the local area connection,
+so that data from all the different sensors may be relayed back to the office. The challenge in this
+part of the project will be connecting the different types and makes of sensors, not all of which may
+readily have a network connection or similar connection.
+
+\subsubsection{High-Level Risks}
+\begin{itemize}
+\item Local geographical features, such as terrain and weather may dictate the need for multiple
+relay points rather than just one.
+\item Low power, self-sustained nodes may not be able to fully sustain uninterrupted connectivity.
+Due to the use of renewable energy sources, the power available will depend on weather
+conditions.
+\item The vegetation and forest cover may make the attenuate the Wifi signal, leading to either
+shorter links and multiple relays, or experimentation with other types of radio links,
+including SuperWiFi.
+\end{itemize}
+
+\subsubsection{Summary Milestone Schedule}
+\begin{itemize}
+\item September – October 2013 : Investigate site, along with possible physical layout of the
+ network.
+\item October – November 2013 : Install a prototype network, connecting the site to the office of
+ the Geoscience research group.
+\item February – March 2014 : Deploy a long-haul network connectivity from the site to the
+ JANET network.
+\item April 2014: Implement the local sensor network on site.
+\end{itemize}
+
+\subsubsection{Summary Budget}
+The cost of this pilot will be approximately 4000 €. This quantity is for the scholarship to the student that will develop this pilot, budget for attending a conference or visiting collaborators, and the purchase of the necessary hardware.
+
+\subsection{Android Mesh Networks}
+
+Fellow: Aleix Sala
+
+Mentor: Daniel Mur
+
+\subsubsection{Pilot purpose or justification}
+The purpose of this pilot is to connect different android devices through a mesh network regardless of the smartphone hardware.
+
+\subsubsection{Measurable pilot objectives and related success criteria}
+\begin{itemize}
+\item Find a solution that is able to create a mesh network with different Android smartphones.
+\item The hardware or software solution must work for any Android mobile.
+\item The solution must work in mobility conditions, such as in the case of people walking on the street.
+\end{itemize}
+
+\subsubsection{High-level requirements}
+\begin{itemize}
+\item It has to work for any mobile. This may imply the use of external hardware.
+\item The communication must be available even in the absence of infrastructure.
+\item A mesh routing protocol must be implemented.
+\item Accessible by any Android application.
+\end{itemize}
+
+\subsubsection{High-level pilot description}
+The goal is to provide a solution for all kinds of Android smartphones to create a mesh network using the standard 802.11s. We will create a multi hop network that will be able to route packets of other smartphones.
+This solution can be used for mobile apps developers to create new kinds of apps like social apps, chats, multi device media reproducers or apps that could help people in extreme situations where the normal infrastructures cannot be used, for example after a natural disaster.
+
+\subsubsection{Summary milestone schedule}
+
+1/10/2013 to 12/10/2013: Look for information about mesh networks, mesh routing protocols and consider different options to implement the project.
+
+12/10/2013 to 3/11/2013: Try different devices and look for the best option.
+
+3/11/2013 to 17/11/2013: Look for already existing mesh implementations for that device and try to make it work to study and understand its performance.
+
+17/11/2013 to 1/12/2013: Decide if it's really possible to implement this project in Android Kernel of if it is necessary to use an external device.
+
+1/12/2013 to 1/6/2014: Implement routing mesh protocols to the final device. Test its performance. Look for project limitations such as battery life and communication distance. Document all the project.
+
+1/6/2014 to 1/7/2014: Prepare final report and presentation.
 
 \section{Conclusion}
 \label{sec:conclusion}
